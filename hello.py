@@ -1,3 +1,2 @@
-import time
-print("hello")
-time.sleep(100)
+def hello(name):
+  return("Hi " + name)
