@@ -3,9 +3,11 @@ from sklearn.ensemble import RandomForestClassifier
 import pickle
 import os
 import pandas as pd
+import time
 
 #model_path = '/cnvrg/output/frt_model_random_forest.sav'
 #model_path = '/output/frt_model_random_forest.sav'
+time.sleep(10000)
 model_path = '/cnvrg/output/frt_model_random_forest.sav'
 model = pickle.load(open(model_path, 'rb'))
 
