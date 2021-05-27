@@ -1,4 +1,4 @@
 import os
+os.system('cd /input/task 1/output && ls')
 def hello(name):
-  os.system('cd /input/task 1/output && ls')
   return("Hello " + name)
