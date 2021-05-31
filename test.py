@@ -10,8 +10,8 @@ import time
 model_path = '/cnvrg/output/frt_model_random_forest.sav'
 try:
     model = pickle.load(open(model_path, 'rb'))
-except e:
-    print(e.message)
+except:
+    print(error)
     
 
 
