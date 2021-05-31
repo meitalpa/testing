@@ -8,12 +8,7 @@ import time
 #model_path = '/cnvrg/output/frt_model_random_forest.sav'
 #model_path = '/output/frt_model_random_forest.sav'
 model_path = '/cnvrg/output/frt_model_random_forest.sav'
-try:
-    model = pickle.load(open(model_path, 'rb'))
-except:
-    print('error')
-    
-
+model = pickle.load(open(model_path, 'rb'))
 
 def predict(created_hr,day_of_week,epoch,category,other = None):
     data = [[created_hr,day_of_week,epoch,category]]
