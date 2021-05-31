@@ -8,9 +8,14 @@ import time
 #model_path = '/cnvrg/output/frt_model_random_forest.sav'
 #model_path = '/output/frt_model_random_forest.sav'
 model_path = '/cnvrg/output/frt_model_random_forest.sav'
+try:
+    model = pickle.load(open(model_path, 'rb'))
+except e:
+    print(e.message)
+    
+
 
 def predict(created_hr,day_of_week,epoch,category,other = None):
-    model = pickle.load(open(model_path, 'rb'))
     data = [[created_hr,day_of_week,epoch,category]]
     df = pd.DataFrame(data, columns = ['created_hr','day_of_week','epoch','category'])
     rfc_predict = model.predict(df)
